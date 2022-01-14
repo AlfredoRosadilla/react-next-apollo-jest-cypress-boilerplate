@@ -1,0 +1,60 @@
+{
+  "name": "aws-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "storybook": "start-storybook -p 6006 --ci",
+    "build-storybook": "build-storybook",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.7",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^12.0.8",
+    "apollo-cache-inmemory": "1.6.6",
+    "deepmerge": "^4.2.2",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "styled-normalize": "^8.0.7"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
+    "@next/eslint-plugin-next": "^12.0.8",
+    "@storybook/addons": "6.4.12",
+    "@storybook/react": "6.4.12",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.2",
+    "cypress": "^9.2.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^3.1.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix && yarn test"
+    }
+  }
+}
