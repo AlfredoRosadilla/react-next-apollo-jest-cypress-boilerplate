@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from '../../../utils/testUtils';
-import HelloWorld from '../';
+
+import HelloWorld from './index';
+import { render } from '../../utils/testUtils';
 
 it('renders successfully', () => {
   render(<HelloWorld />);
