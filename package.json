@@ -2,11 +2,13 @@
   "name": "aws-challenge",
   "version": "1.0.0",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "postinstall": "husky install",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "storybook": "start-storybook -p 6006 --ci",
@@ -29,7 +31,6 @@
     "styled-components": "^5.3.3",
     "styled-normalize": "^8.0.7"
   },
-  "license": "MIT",
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
     "@next/eslint-plugin-next": "^12.0.8",
@@ -47,6 +48,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.7",
     "prettier": "^2.5.1"
   }
