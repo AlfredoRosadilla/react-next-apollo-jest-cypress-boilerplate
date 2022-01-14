@@ -1,19 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import Header from '../Header.js';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-`;
+import Header from '../Header';
+import { Container } from './index.styles';
 
 const Layout = ({ children }) => (
   <Container>
