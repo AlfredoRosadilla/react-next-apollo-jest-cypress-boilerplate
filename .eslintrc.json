@@ -1,6 +1,6 @@
 {
-  "extends": ["plugin:prettier/recommended", "plugin:react/recommended"],
-  "parser": "babel-eslint",
+  "extends": ["plugin:prettier/recommended", "plugin:react/recommended", "plugin:@next/next/recommended"],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     // Can I remove these now?
@@ -9,6 +9,14 @@
       "classes": true
     }
   },
+  "overrides": [
+    {
+        "files": ["*.test.js", "*.spec.js"],
+        "rules": {
+            "no-unused-expressions": "off"
+        }
+    }
+  ],
   "rules": {
     "no-debugger": 0,
     "no-alert": 0,
@@ -19,13 +27,6 @@
       "ForInStatement",
       "LabeledStatement",
       "WithStatement"
-    ],
-    "no-unused-vars": [
-      1,
-      {
-        "ignoreSiblings": true,
-        "argsIgnorePattern": "res|next|^err"
-      }
     ],
     "prefer-const": [
       "error",

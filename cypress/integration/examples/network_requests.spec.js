@@ -102,8 +102,7 @@ context('Network Requests', () => {
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: user.id,
           title: 'Cypress Test Runner',
-          body:
-            'Fast, easy and reliable testing for anything that runs in a browser.',
+          body: 'Fast, easy and reliable testing for anything that runs in a browser.',
         });
       })
       // note that the value here is the returned value of the 2nd request
@@ -136,8 +135,7 @@ context('Network Requests', () => {
         cy.request('POST', 'https://jsonplaceholder.cypress.io/posts', {
           userId: this.user.id,
           title: 'Cypress Test Runner',
-          body:
-            'Fast, easy and reliable testing for anything that runs in a browser.',
+          body: 'Fast, easy and reliable testing for anything that runs in a browser.',
         })
           .its('body')
           .as('post'); // save the new post from the response

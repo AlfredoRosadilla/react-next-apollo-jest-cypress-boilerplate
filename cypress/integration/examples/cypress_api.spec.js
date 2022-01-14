@@ -13,13 +13,7 @@ context('Cypress.Commands', () => {
       {
         prevSubject: true,
       },
-      (subject, method) => {
-        // the previous subject is automatically received
-        // and the commands arguments are shifted
-
-        // allow us to change the console method used
-        method = method || 'log';
-
+      (subject, method = 'log') => {
         // log the subject to the console
         // @ts-ignore TS7017
         console[method]('The subject is', subject);
